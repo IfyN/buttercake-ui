@@ -6,7 +6,8 @@ export default function Button({
   label,
   variant = "primary",
   size = "md",
-  disabled = false,
+  //disabled = false,
+  onClick,
   ...props
 }) {
   return (
@@ -14,6 +15,7 @@ export default function Button({
       $variant={variant}
       $size={size}
       // disabled={disabled}
+      onClick={onClick}
       {...props}
     >
       {label}
@@ -25,5 +27,6 @@ Button.propTypes = {
   label: PropTypes.string.isRequired,
   variant: PropTypes.oneOf(["primary", "secondary", "outline"]),
   size: PropTypes.oneOf(["sm", "md", "lg"]),
+  onClick: PropTypes.func,
   // disabled: PropTypes.bool,
 };
