@@ -2,9 +2,20 @@ import React from "react";
 import PropTypes from "prop-types";
 import { StyledButton } from "./Button.styles";
 
-export default function Button({ label, variant = "primary", onClick,  ...props }) {
+export default function Button({
+  label,
+  variant = "primary",
+  size = "md",
+  disabled = false,
+  ...props
+}) {
   return (
-    <StyledButton $variant={variant} onClick={onClick} {...props}>
+    <StyledButton
+      $variant={variant}
+      $size={size}
+      // disabled={disabled}
+      {...props}
+    >
       {label}
     </StyledButton>
   );
@@ -12,6 +23,7 @@ export default function Button({ label, variant = "primary", onClick,  ...props 
 
 Button.propTypes = {
   label: PropTypes.string.isRequired,
-  variant: PropTypes.oneOf(["primary", "secondary"]),
-  onClick: PropTypes.func,
+  variant: PropTypes.oneOf(["primary", "secondary", "outline"]),
+  size: PropTypes.oneOf(["sm", "md", "lg"]),
+  // disabled: PropTypes.bool,
 };
