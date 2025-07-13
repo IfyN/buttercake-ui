@@ -38,28 +38,33 @@ It supports four types: \`info\`, \`success\`, \`warning\`, and \`error\`.
   },
 };
 
-const Template = (args) => <Alert {...args} />;
+import Alert from "../components/Alert";
 
-export const Info = Template.bind({});
-Info.args = {
-  type: "info",
-  message: "This is an info alert.",
+
+export const Info = {
+  args: {
+    type: "info",
+    message: "This is an info alert.",
+  },
 };
 
-export const Success = Template.bind({});
-Success.args = {
-  type: "success",
-  message: "This is a success alert!",
+export const Success = {
+  args: {
+    type: "success",
+    message: "This is a success alert!",
+  },
 };
 
-export const Warning = Template.bind({});
-Warning.args = {
-  type: "warning",
-  message: "This is a warning alert!",
+export const Warning = {
+  args: {
+    type: "warning",
+    message: "This is a warning alert!",
+  },
 };
 
-export const Error = Template.bind({});
-Error.args = {
-  type: "error",
-  message: "This is an error alert!",
+export const Error = {
+  args: {
+    type: "error",
+    message: "This is an error alert!",
+  },
 }
