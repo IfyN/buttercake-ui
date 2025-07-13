@@ -49,6 +49,7 @@ const sizeStyles = {
 //   cursor: not-allowed;
 //   opacity: 0.6;
 //   box-shadow: none;
+//     ${(props) => props.disabled && disabledStyles}
 // `;
 
 export const StyledButton = styled.button`
